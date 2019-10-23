@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react'
-import Figures from './components/figures';
+import Figures from './components/Figures.js';
 
 class App extends Component {
 
@@ -13,7 +13,7 @@ class App extends Component {
         fetch('http://jsonplaceholder.typicode.com/users')
             .then(res => res.json())
             .then((data) => {
-            this.setState({ contacts: data })
+            this.setState({ figures: data })
         })
         .catch(console.log)
     }
