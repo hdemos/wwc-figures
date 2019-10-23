@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react'
 import Figures from './components/Figures.js';
@@ -11,6 +10,7 @@ class App extends Component {
 
     componentDidMount() {
         fetch('http://jsonplaceholder.typicode.com/users')
+        // fetch('http://localhost:3001/')
             .then(res => res.json())
             .then((data) => {
             this.setState({ figures: data })
